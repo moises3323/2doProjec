@@ -1,0 +1,70 @@
+<p>
+  reporte works!
+</p>
+
+<ul>
+  <li>
+   <a routerLink="/tiendacomponent" routerLinkActive="active">tiendas</a>
+  </li>
+  <li>
+    <a routerLink="/encargadoscomponent" routerLinkActive="active">encargados</a>
+  </li>
+  <li>
+   <a routerLink="/rolescomponent" routerLinkActive="active">roles</a>
+  </li>
+  <li>
+   <a routerLink="/reportescomponent" routerLinkActive="active">reportes</a>
+  </li>
+ 
+ 
+ </ul>
+
+ <br>
+
+ <form class="container text-center" #ReporForm="ngForm" (ngSubmit)="onSubmit(ReporForm)" >
+  <div class="form-control-lg">
+      
+      <div class="form-control-lg">
+        <input  name="Repor_Descipcion" placeholder="Ingrese Descripcion" #Repor_Descipcion="ngModel" [(ngModel)]="t.selectedRepor.Repor_Descipcion"  required>
+      </div>
+      <br>
+      <div class="form-control-lg">
+        <input name="Repor_MontoTotal" placeholder="Ingrese Monto" #Repor_MontoTotal="ngModel" [(ngModel)]="t.selectedRepor.Repor_MontoTotal"  required>
+    </div>
+    <br>
+    <div class="form-control-lg">
+      <input name="Repor_NumUnidades" placeholder="Ingrese No de Unidades" #Repor_NumUnidades="ngModel" [(ngModel)]="t.selectedRepor.Repor_NumUnidades"  required>
+  </div>
+  <br>
+  <div class="form-control-lg">
+    <input name="Repor_Fecha" placeholder="Ingrese Fecha" #Repor_Fecha="ngModel" [(ngModel)]="t.selectedRepor.Repor_Fecha"  required>
+</div>
+<br>
+<div class="form-control-lg">
+  <input name="Tienda_Id" placeholder="Ingrese id Tienda" #Tienda_Id="ngModel" [(ngModel)]="t.selectedRepor.Tienda_Id"  required>
+</div>
+<br>
+<div class="form-control-lg">
+  <input name="En_id" placeholder="Ingrese id Encargado" #En_id="ngModel" [(ngModel)]="t.selectedRepor.En_id"  required>
+</div>
+<br>
+<div class="form-control-lg">
+  <input name="TipoA_id" placeholder="Ingrese Tipo de Accion" #TipoA_id="ngModel" [(ngModel)]="t.selectedRepor.TipoA_id"  required>
+</div>
+    
+<br>
+<br>
+  </div>
+  <div> 
+    <button class="btn btn-dark" type="submit">Enviar Formulario</button>
+    <button style="margin-left: 10px" class="button-xlarge pure-button" type="button" (click)="resetForm(ReporForm)"> Borrar</button>
+  </div>
+
+
+
+
+  <br>
+  <div class="form-control-lg">
+      <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
+  </div>
+</form>

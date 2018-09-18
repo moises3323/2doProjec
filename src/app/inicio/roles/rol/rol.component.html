@@ -1,0 +1,49 @@
+<p>
+  rol works!
+</p>
+
+<ul>
+  <li>
+    <a routerLink="/tiendascomponent" routerLinkActive="active">tiendas</a>
+  </li>
+  <li>
+   <a routerLink="/encargadocomponent" routerLinkActive="active">encargados</a>
+  </li>
+  <li>
+   <a routerLink="/rolcomponent" routerLinkActive="active">roles</a>
+  </li>
+  <li>
+   <a routerLink="/reportecomponent" routerLinkActive="active">reportes</a>
+  </li>
+ 
+ 
+ </ul>
+
+ <br>
+
+<br>
+
+ <form class="container text-center" #RolForm="ngForm" (ngSubmit)="onSubmit(RolForm)" >
+  <div class="form-control-lg">
+      
+      <div class="form-control-lg">
+        <input  name="Rol_descripcion" placeholder="Ingrese Rol" #Rol_descripcion="ngModel" [(ngModel)]="r.selectedRolin.Rol_descripcion"  required>
+      </div>
+     
+    
+<br>
+<br>
+  </div>
+  <div> 
+    <button class="btn btn-dark" type="submit">Enviar Formulario</button>
+    <button style="margin-left: 10px" class="button-xlarge pure-button" type="button" (click)="resetForm(RolForm)"> Borrar</button>
+  </div>
+
+
+
+
+  <br>
+  <div class="form-control-lg">
+      <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
+  </div>
+</form>

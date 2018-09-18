@@ -1,0 +1,17 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let tienda of t.storeList">
+    <td>{{tienda.Tienda_Id}}</td>
+    <td>{{tienda.Tienda_Nombre}}</td>
+    <td>{{tienda.Tienda_Direccion}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(tienda)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+    </td>
+    <td>
+      <a class="btn text-danger" (click)="onDelete(tienda.Tienda_Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

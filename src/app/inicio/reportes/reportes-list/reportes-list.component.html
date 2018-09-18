@@ -1,0 +1,22 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let Repo of t.reporList">
+    <td>{{Repo.Repor_Id}}</td>
+    <td>{{Repo.Repor_Descipcion}}</td>
+    <td>{{Repo.Repor_MontoTotal}}</td>
+    <td>{{Repo.Repor_NumUnidades}}</td>
+    <td>{{Repo.Repor_Fecha}}</td>
+    <td>{{Repo.Tienda_Id}}</td>
+    <td>{{Repo.En_id}}</td>
+    <td>{{Repo.TipoA_id}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(Repo)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+    </td>
+    <td>
+      <a class="btn text-danger" (click)="onDelete(Repo.Repor_Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
