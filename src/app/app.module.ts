@@ -23,6 +23,8 @@ import { RolesListComponent } from './inicio/roles/roles-list/roles-list.compone
 import { TiendasComponent } from './inicio/tiendas/tiendas.component';
 import { TiendasListComponent } from './inicio/tiendas/tiendas-list/tiendas-list.component';
 import { TiendaComponent } from './inicio/tiendas/tienda/tienda.component';
+import { EncabezadoComponent } from './inicio/encabezado/encabezado.component';
+import { PieComponent } from './inicio/pie/pie.component';
 
 
 const appRoutes: Routes = [ 
@@ -66,7 +68,9 @@ const appRoutes: Routes = [
     RolesListComponent,
     TiendasComponent,
     TiendasListComponent,
-    TiendaComponent
+    TiendaComponent,
+    EncabezadoComponent,
+    PieComponent
   ],
   imports: [
     BrowserModule,

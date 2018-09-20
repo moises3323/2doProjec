@@ -1,17 +1,37 @@
-<table class="table table-sm table-hover">
-  <tr *ngFor="let tienda of t.storeList">
-    <td>{{tienda.Tienda_Id}}</td>
-    <td>{{tienda.Tienda_Nombre}}</td>
-    <td>{{tienda.Tienda_Direccion}}</td>
-    <td>
-      <a class="btn" (click)="showForEdit(tienda)">
-        <i class="fa fa-pencil-square-o"></i>
-      </a>
-    </td>
-    <td>
-      <a class="btn text-danger" (click)="onDelete(tienda.Tienda_Id)">
-        <i class="fa fa-trash-o"></i>
-      </a>
-    </td>
-  </tr>
+<div class="container bg-dark text-white py-5 text-center">
+    <div class="container">
+      <h2>TIENDAS</h2>
+      <hr>
+    </div>
+<table class="table table-bordered table-hover">
+    <thead class="text-center">
+        <tr class="text-dark bg-light">
+            <td>ID</td>
+            <td>NOMBRE DE LA TIENDA</td>
+            <td>DIRECCION</td>
+            <td>EDITAR</td>
+            <td>ELIMINAR</td>
+          </tr>
+    </thead>
+    <TBody>
+        <tr *ngFor="let tienda of t.storeList">
+            <td>{{tienda.Tienda_Id}}</td>
+            <td>{{tienda.Tienda_Nombre}}</td>
+            <td>{{tienda.Tienda_Direccion}}</td>
+            <td>
+              <a class="btn btn-success" (click)="showForEdit(tienda)">
+                <i class="fa fa-pencil-square-o"></i>
+                EDITAR
+              </a>
+            </td>
+            <td>
+              <a class="btn btn-danger" (click)="onDelete(tienda.Tienda_Id)">
+                <i class="fa fa-trash-o"></i>
+                ELIMINAR
+              </a>
+            </td>
+          </tr>
+    </TBody>
+  
 </table>
+</div>

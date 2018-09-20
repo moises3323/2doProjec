@@ -1,53 +1,36 @@
-<p>
-  tienda works!
-</p>
-
-<ul>
-  <li>
-    <a routerLink="/tiendascomponent" routerLinkActive="active">tiendas</a>
-  </li>
-  <li>
-   <a routerLink="/encargadoscomponent" routerLinkActive="active">encargados</a>
-  </li>
-  <li>
-   <a routerLink="/rolescomponent" routerLinkActive="active">roles</a>
-  </li>
-  <li>
-   <a routerLink="/reportescomponent" routerLinkActive="active">reportes</a>
-  </li>
- 
- 
- </ul>
-
- <br>
-
- <form class="container text-center" #TiendaForm="ngForm" (ngSubmit)="onSubmit(TiendaForm)" >
-  <div class="form-control-lg">
+<div class="container bg-dark text-white py-5 text-center">
+   <form class="container text-center" #TiendaForm="ngForm" (ngSubmit)="onSubmit(TiendaForm)" >
+    <div class="container">
+        <div class="container text-center text-white ">
+            <h2>AGREGAR NUEVA TIENDA</h2>
+          <hr>
+        </div>
       
-      <div class="form-control-lg">
-        <input  name="Tienda_Nombre" placeholder="Ingrese Nombre" #Tienda_Nombre="ngModel" [(ngModel)]="t.selectedStore.Tienda_Nombre"  required>
-      </div>
-      <br>
-      <div class="form-control-lg">
-        <input name="Tienda_Direccion" placeholder="Ingrese Direccion" #Tienda_Direccion="ngModel" [(ngModel)]="t.selectedStore.Tienda_Direccion"  required>
+            <div class="form-group">
+                <input class="form-control" name="Tienda_Nombre" placeholder="Ingrese Nombre" #Tienda_Nombre="ngModel" [(ngModel)]="t.selectedStore.Tienda_Nombre"  required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="Tienda_Direccion" placeholder="Ingrese Direccion" #Tienda_Direccion="ngModel" [(ngModel)]="t.selectedStore.Tienda_Direccion"  required>
+            </div>
+
+            <div> 
     </div>
-    
-<br>
-<br>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+          <button class="btn btn-success" type="submit">AGREGAR TIENDA</button>
+      </div>
+      <div class="form-group col-md-4">
+          <button class="btn btn-danger" (click)="resetForm(TiendaForm)"> LIMPIAR CAMPOS</button>
+      </div>
+        
+      <div class="form-group col-md-4">
+          <a class="btn btn-primary" href="../inicio_catalogos/index_catalogos.php">IR A INICIO</a>
+      </div>
+      </div>
+    </div>
+
+  </form>
   </div>
-  <div> 
-    <button class="btn btn-dark" type="submit">Enviar Formulario</button>
-    <button style="margin-left: 10px" class="button-xlarge pure-button" type="button" (click)="resetForm(TiendaForm)"> Borrar</button>
-  </div>
-
-
-
-
-  <br>
-  <div class="form-control-lg">
-      <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
-  </div>
-</form>
-
+  
 
 

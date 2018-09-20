@@ -1,18 +1,39 @@
-<table class="table table-sm table-hover">
-  <tr *ngFor="let Encar of e.managerList">
-    <td>{{Encar.En_id}}</td>
-    <td>{{Encar.En_Nombre}}</td>
-    <td>{{Encar.En_Apellido}}</td>
-    <td>{{Encar.En_Rolid}}</td>
-    <td>
-      <a class="btn" (click)="showForEdit(Encar)">
-        <i class="fa fa-pencil-square-o"></i>
-      </a>
-    </td>
-    <td>
-      <a class="btn text-danger" (click)="onDelete(Encar.En_id)">
-        <i class="fa fa-trash-o"></i>
-      </a>
-    </td>
-  </tr>
+<div class="container bg-dark text-white py-5 text-center">
+    <div class="container">
+      <h2>LISTA DE ENCARGADOS</h2>
+      <hr>
+    </div>
+<table class="table table-bordered table-hover">
+    <thead class="text-center">
+        <tr class="text-dark bg-light">
+            <td>ID</td>
+            <td>NOMBRE</td>
+            <td>APELLIDO</td>
+            <td>PUESTO</td>
+            <td>EDITAR</td>
+            <td>ELIMINAR</td>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Encar of e.managerList">
+            <td>{{Encar.En_id}}</td>
+            <td>{{Encar.En_Nombre}}</td>
+            <td>{{Encar.En_Apellido}}</td>
+            <td>{{Encar.En_Rolid}}</td>
+            <td>
+              <a class="btn btn-success" (click)="showForEdit(Encar)">
+                <i class="fa fa-pencil-square-o"></i>
+                Editar
+              </a>
+            </td>
+            <td>
+              <a class="btn btn-danger" (click)="onDelete(Encar.En_id)">
+                <i class="fa fa-trash-o"></i>
+                Eliminar
+              </a>
+            </td>
+          </tr>
+    </tbody>
+  
 </table>
+</div>

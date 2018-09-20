@@ -1,17 +1,36 @@
-<table class="table table-sm table-hover">
-    <tr *ngFor="let rol of r.rolinList">
-      <td>{{rol.Rol_id}}</td>
-      <td>{{rol.Rol_descripcion}}</td>
-     
-      <td>
-        <a class="btn" (click)="showForEdit(rol)">
-          <i class="fa fa-pencil-square-o"></i>
-        </a>
-      </td>
-      <td>
-        <a class="btn text-danger" (click)="onDelete(rol.Rol_id)">
-          <i class="fa fa-trash-o"></i>
-        </a>
-      </td>
-    </tr>
+<div class="container bg-dark text-white py-5 text-center">
+    <div class="container">
+      <h2>ROLES</h2>
+      <hr>
+    </div>
+<table class="table table-bordered table-hover">
+    <thead class="text-center">
+        <tr class="text-dark bg-light">
+            <td>ID</td>
+            <td>TIPO DE ROL</td>
+            <td>EDITAR</td>
+            <td>ELIMINAR</td>
+          </tr>
+    </thead>
+    <TBody>
+        <tr *ngFor="let rol of r.rolinList">
+            <td>{{rol.Rol_id}}</td>
+            <td>{{rol.Rol_descripcion}}</td>
+           
+            <td>
+              <a class="btn btn-success" (click)="showForEdit(rol)">
+                <i class="fa fa-pencil-square-o"></i>
+                Editar
+              </a>
+            </td>
+            <td>
+              <a class="btn btn-danger" (click)="onDelete(rol.Rol_id)">
+                <i class="fa fa-trash-o"></i>
+                Eliminar
+              </a>
+            </td>
+          </tr>
+    </TBody>
+
   </table>
+  </div>

@@ -1,55 +1,34 @@
-<p>
-  encargado works!
-</p>
-
-<ul>
-  <li>
-    <a routerLink="/tiendascomponent" routerLinkActive="active">tiendas</a>
-  </li>
-  <li>
-    <a routerLink="/encargadoscomponent" routerLinkActive="active">encargados</a>
-  </li>
-  <li>
-   <a routerLink="/rolescomponent" routerLinkActive="active">roles</a>
-  </li>
-  <li>
-   <a routerLink="/reportescomponent" routerLinkActive="active">reportes</a>
-  </li>
- 
- 
- </ul>
-
-
- <br>
-
- <form class="container text-center" #EncargadoForm="ngForm" (ngSubmit)="onSubmit(EncargadoForm)" >
-  <div class="form-control-lg">
-      
-      <div class="form-control-lg">
-        <input  name="En_Nombre" placeholder="Ingrese Nombre" #En_Nombre="ngModel" [(ngModel)]="e.selectedManager.En_Nombre"  required>
-      </div>
-      <br>
-      <div class="form-control-lg">
-        <input name="En_Apellido" placeholder="Ingrese Apellido" #En_Apellido="ngModel" [(ngModel)]="e.selectedManager.En_Apellido"  required>
-    </div>
-    <br>
-    <div class="form-control-lg">
-      <input name="En_Rolid" placeholder="Ingrese Rol" #En_Rolid="ngModel" [(ngModel)]="e.selectedManager.En_Rolid"  required>
-  </div>
+<div class="container bg-dark text-white py-5 text-center">
+    <form class="container text-center" #EncargadoForm="ngForm" (ngSubmit)="onSubmit(EncargadoForm)" >
+        <div class="container">
+            <div class="container text-center text-white ">
+                <h2>AGREGAR NUEVO ENCARGADO</h2>
+              <hr>
+              </div>
+            
+            <div class="form-group">
+              <input class="form-control" name="En_Nombre" placeholder="Ingrese Nombre" #En_Nombre="ngModel" [(ngModel)]="e.selectedManager.En_Nombre"  required>
+            </div>
+            <br>
+            <div class="form-group">
+              <input class="form-control" name="En_Apellido" placeholder="Ingrese Apellido" #En_Apellido="ngModel" [(ngModel)]="e.selectedManager.En_Apellido"  required>
+          </div>
+          <br>
+          <div class="form-group">
+            <input class="form-control"  name="En_Rolid" placeholder="Ingrese Rol" #En_Rolid="ngModel" [(ngModel)]="e.selectedManager.En_Rolid"  required>
+        </div>
     
-<br>
-<br>
-  </div>
-  <div> 
-    <button class="btn btn-dark" type="submit">Enviar Formulario</button>
-    <button style="margin-left: 10px" class="button-xlarge pure-button" type="button" (click)="resetForm(EncargadoForm)"> Borrar</button>
-  </div>
-
-
-
-
-  <br>
-  <div class="form-control-lg">
-      <a class="btn btn-danger" href="../inicio_catalogos/index_catalogos.php"> Ir a Inicio</a>
-  </div>
-</form>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4"> 
+                <button class="btn btn-success" type="submit">AGREGAR ENCARGADO</button>
+            </div>
+            <div class="form-group col-md-4">
+                  <button class="btn btn-danger" type="button" (click)="resetForm(EncargadoForm)">LIMPIAR CAMPOS</button>
+            </div>
+            <div class="form-group col-md-4">
+                  <a class="btn btn-primary" href="../inicio_catalogos/index_catalogos.php">IR A INICIO</a>
+            </div>
+        </div>
+      </form>
+</div>
